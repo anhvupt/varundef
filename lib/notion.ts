@@ -55,3 +55,28 @@ function getToday(dateString: string) {
   let today = `${month} ${day}, ${year}`;
   return today;
 }
+
+const { NotionToMarkdown } = require('notion-to-md');
+const n2m = new NotionToMarkdown({ notionClient: notion });
+export const getSingleBlogPostBySlug = async (slug: string) => {
+  const response = await notion.databases.query({
+    database_id: process.env.DATABASE_ID,
+    filter: {
+      property: "Slug",
+      formula: {
+        string: {
+          equals: slug,
+        },
+      },
+    },
+  });
+  const page = response.results[0];
+  const metadata = getPageMetaData(page);
+  const mdblocks = await n2m.pageToMarkdown(page.id);
+  const mdString = n2m.toMarkdownString(mdblocks);
+  return {
+      metadata,
+      markdown: mdString,
+  };
+}
+
