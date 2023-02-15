@@ -2,7 +2,6 @@ import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import Link from 'next/link';
 import { getAllPublished } from '../lib/notion';
-import styles from '../styles/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
