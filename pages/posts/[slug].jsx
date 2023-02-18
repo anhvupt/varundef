@@ -1,12 +1,11 @@
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { gruvboxLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { getAllPublished, getSingleBlogPostBySlug } from '../../lib/notion';
-import styles from '../../styles/Home.module.css';
 
 const CodeBlock = ({ language, codestring }) => {
   return (
-    <SyntaxHighlighter language={language} style={vscDarkPlus} PreTag='div'>
+    <SyntaxHighlighter language={language} style={gruvboxLight} PreTag='div'>
       {codestring}
     </SyntaxHighlighter>
   );
@@ -21,7 +20,8 @@ const Post = ({ post }) => {
           <p className='text-gray-400 border border-yellow-100'>{tag}</p>
         ))}
       </div> */}
-      <ReactMarkdown className='mt-8'
+      <ReactMarkdown
+        className='mt-8'
         components={{
           code({ node, inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
