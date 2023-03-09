@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const route = useRouter().route;
   return (
     <div className='gap-2 flex flex-col items-start lg:flex-row lg:items-center lg:justify-between w-3/4 m-auto'>
       <Link href=''>
@@ -9,10 +11,20 @@ export default function Header() {
         </h1>
       </Link>
       <nav className='inline m-auto lg:mx-4 text-xl text-black divide-x divide-yellow-700'>
-        <Link className='px-4' href={'/about'}>About</Link>
-        <Link className='px-4' href={'/'}>Blog</Link>
+        <Link
+          className={
+            route === '/about' ? 'px-4 bg-yellow-100' : 'px-4'
+          }
+          href={'/about'}>
+          About
+        </Link>
+        <Link className={route === '/' ? 'px-4 bg-yellow-100' : 'px-4'} href={'/'}>
+          Blog
+        </Link>
       </nav>
-      <span className='block text-black border border-yellow-700 p-3 rounded-full cursor-pointer'>Search</span>
+      {/* <span className='block text-black border border-yellow-700 p-3 rounded-full cursor-pointer'>
+        Search
+      </span> */}
     </div>
   );
 }

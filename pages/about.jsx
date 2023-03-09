@@ -23,67 +23,69 @@ export default function About() {
         <div className='w-3/4 m-auto flex flex-col lg:mt-8'>
           <h2 className='text-3xl font-bold mb-4'>About Me</h2>
           <p className='mt-4'>
-            I am a skilled web developer based in Vietnam, specializing in .NET Core, Angular, and
+            I am Vu Pham, a skilled web developer based in Vietnam, specializing in .NET Core, Angular, and
             TypeScript. With a passion for clean code and cutting-edge technologies, I build
             scalable web applications and continuously expand my knowledge of cloud technologies
             like Azure and AWS.
           </p>
-          <h3 className='text-xl font-semibold mb-4 mt-8'>Find me at:</h3>
-          <div className='flex items-center mb-4'>
-            <FaEnvelope className='mr-2' />
-            <a href='mailto:anhvupt2412@gmail.com' className='underline'>
-              anhvupt2412@gmail.com
-            </a>
-          </div>
-          <div className='flex items-center mb-4'>
-            <FaLinkedin className='mr-2' />
-            <a
-              href='https://www.linkedin.com/in/anhvupt'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'>
-              linkedin.com/in/anhvupt
-            </a>
-          </div>
-          <div className='flex items-center mb-4'>
-            <FaGithub className='mr-2' />
-            <a
-              href='https://github.com/anhvupt'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'>
-              anhvupt
-            </a>
-          </div>
-          <div className='flex items-center mb-4'>
-            <FaTwitter className='mr-2' />
-            <a
-              href='https://twitter.com/anhvupt'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'>
-              @anhvupt
-            </a>
-          </div>
-          <div className='flex items-center mb-4'>
-            <FaFacebook className='mr-2' />
-            <a
-              href='https://www.facebook.com/anhvupt98'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'>
-              fb.me/anhvupt98
-            </a>
-          </div>
-          <div className='flex items-center mb-4'>
-            <FaInstagram className='mr-2' />
-            <a
-              href='https://www.instagram.com/_anhvupt'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'>
-              @_anhvupt
-            </a>
+          <p className='text-xl w-max font-semibold mb-4 mt-8 bg-yellow-100'>Find me at</p>
+          <div className='flex flex-col'>
+            <div className='flex items-center mb-4'>
+              <FaEnvelope className='mr-2' />
+              <a href='mailto:anhvupt2412@gmail.com' className='underline'>
+                anhvupt2412@gmail.com
+              </a>
+            </div>
+            <div className='flex items-center mb-4'>
+              <FaLinkedin className='mr-2' />
+              <a
+                href='https://www.linkedin.com/in/anhvupt'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline'>
+                linkedin.com/in/anhvupt
+              </a>
+            </div>
+            <div className='flex items-center mb-4'>
+              <FaGithub className='mr-2' />
+              <a
+                href='https://github.com/anhvupt'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline'>
+                anhvupt
+              </a>
+            </div>
+            <div className='flex items-center mb-4'>
+              <FaTwitter className='mr-2' />
+              <a
+                href='https://twitter.com/anhvupt'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline'>
+                @anhvupt
+              </a>
+            </div>
+            <div className='flex items-center mb-4'>
+              <FaFacebook className='mr-2' />
+              <a
+                href='https://www.facebook.com/anhvupt98'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline'>
+                fb.me/anhvupt98
+              </a>
+            </div>
+            <div className='flex items-center mb-4'>
+              <FaInstagram className='mr-2' />
+              <a
+                href='https://www.instagram.com/_anhvupt'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline'>
+                @_anhvupt
+              </a>
+            </div>
           </div>
         </div>
       </main>
