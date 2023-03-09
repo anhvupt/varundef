@@ -18,25 +18,24 @@ export default function About() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='pt-16'>
+      <main className='w-3/4 m-auto flex flex-col lg:mt-8'>
         <Header />
-        <div className='w-3/4 m-auto flex flex-col lg:mt-8'>
-          <h2 className='text-3xl font-bold mb-4'>About Me</h2>
+        <div className=''>
           <p className='mt-4'>
-            I am Vu Pham, a skilled web developer based in Vietnam, specializing in .NET Core, Angular, and
-            TypeScript. With a passion for clean code and cutting-edge technologies, I build
-            scalable web applications and continuously expand my knowledge of cloud technologies
-            like Azure and AWS.
+            I am Vu Pham, a skilled web developer based in Vietnam, specializing in .NET Core,
+            Angular, and TypeScript. With a passion for clean code and cutting-edge technologies, I
+            build scalable web applications and continuously expand my knowledge of cloud
+            technologies like Azure and AWS.
           </p>
           <p className='text-xl w-max font-semibold mb-4 mt-8 bg-yellow-100'>Find me at</p>
-          <div className='flex flex-col'>
-            <div className='flex items-center mb-4'>
+          <div className='flex flex-wrap'>
+            <div className='flex items-center mb-4 lg:w-1/2'>
               <FaEnvelope className='mr-2' />
               <a href='mailto:anhvupt2412@gmail.com' className='underline'>
                 anhvupt2412@gmail.com
               </a>
             </div>
-            <div className='flex items-center mb-4'>
+            <div className='flex items-center mb-4 lg:w-1/2'>
               <FaLinkedin className='mr-2' />
               <a
                 href='https://www.linkedin.com/in/anhvupt'
@@ -46,7 +45,7 @@ export default function About() {
                 linkedin.com/in/anhvupt
               </a>
             </div>
-            <div className='flex items-center mb-4'>
+            <div className='flex items-center mb-4 lg:w-1/2'>
               <FaGithub className='mr-2' />
               <a
                 href='https://github.com/anhvupt'
@@ -56,7 +55,7 @@ export default function About() {
                 anhvupt
               </a>
             </div>
-            <div className='flex items-center mb-4'>
+            <div className='flex items-center mb-4 lg:w-1/2'>
               <FaTwitter className='mr-2' />
               <a
                 href='https://twitter.com/anhvupt'
@@ -66,7 +65,7 @@ export default function About() {
                 @anhvupt
               </a>
             </div>
-            <div className='flex items-center mb-4'>
+            <div className='flex items-center mb-4 lg:w-1/2'>
               <FaFacebook className='mr-2' />
               <a
                 href='https://www.facebook.com/anhvupt98'
@@ -76,7 +75,7 @@ export default function About() {
                 fb.me/anhvupt98
               </a>
             </div>
-            <div className='flex items-center mb-4'>
+            <div className='flex items-center mb-4 lg:w-1/2'>
               <FaInstagram className='mr-2' />
               <a
                 href='https://www.instagram.com/_anhvupt'
