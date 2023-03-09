@@ -18,9 +18,9 @@ export default function About() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header/>
-      <main className='bg-yellow-50 bg-opacity-30 p-8'>
-        <div className=''>
+      <main className='pt-16'>
+        <Header />
+        <div className='w-3/4 m-auto flex flex-col lg:mt-8'>
           <h2 className='text-3xl font-bold mb-4'>About Me</h2>
           <p className='mt-4'>
             I am a software developer with a passion for creating practical values for users through

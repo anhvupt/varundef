@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-yellow-50 bg-opacity-30 text-sm lg:text-base text-gray-800;
+  @apply bg-yellow-50 bg-opacity-50 text-sm lg:text-base text-gray-800;
 }
 
 ::-webkit-scrollbar {
