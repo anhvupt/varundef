@@ -14,7 +14,7 @@ const Post = ({ post }) => {
   return (
     <>
       <section className='p-6 lg:p-0 lg:w-3/4 m-auto lg:my-8'>
-        <a className='bg-yellow-100 text-black' href='/'>Back to list</a>
+        <Link className='bg-yellow-100 text-black' href='/'>Back to list</Link>
         <h2 className='text-xl font-semibold mt-4'>{post.metadata.title}</h2>
         <span>{post.metadata.date}</span>
         {/* <div className='flex gap-2'>
