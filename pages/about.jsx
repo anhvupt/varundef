@@ -23,10 +23,10 @@ export default function About() {
         <div className='w-3/4 m-auto flex flex-col lg:mt-8'>
           <h2 className='text-3xl font-bold mb-4'>About Me</h2>
           <p className='mt-4'>
-            I am a software developer with a passion for creating practical values for users through
-            programming. I have experience working in the computer software industry as a software
-            engineer and back-end developer, and have skills in TypeScript, C#, Angular, ASP.NET,
-            NgRx, ASP.NET Core, MongoDB, .NET Framework, and Design Patterns.
+            I am a skilled web developer based in Vietnam, specializing in .NET Core, Angular, and
+            TypeScript. With a passion for clean code and cutting-edge technologies, I build
+            scalable web applications and continuously expand my knowledge of cloud technologies
+            like Azure and AWS.
           </p>
           <h3 className='text-xl font-semibold mb-4 mt-8'>Find me at:</h3>
           <div className='flex items-center mb-4'>
