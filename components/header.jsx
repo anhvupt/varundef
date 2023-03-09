@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 export default function Header() {
   const route = useRouter().route;
   return (
-    <div className='gap-2 flex flex-col items-start lg:flex-row lg:items-center lg:justify-between m-auto w-full pb-16'>
+    <div className='gap-2 flex flex-col items-start lg:flex-row lg:items-center lg:justify-between m-auto w-full pb-12'>
       <Link href=''>
         <h1 className='m-auto lg:m-0 text-2xl text-black font-semibold border border-yellow-700 w-max p-3 cursor-pointer'>
           #VARUNDEF

@@ -15,9 +15,9 @@ export default function Home({ posts }) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='w-2/3 m-auto '>
+      <main className='w-2/3 m-auto flex flex-col lg:mt-8'>
         <Header />
-        <section className='flex flex-col divide-y lg:mt-8'>
+        <section className=''>
           {posts.map((post, index) => (
             <section key={index} className='py-6'>
               <h2 className='w-max text-black text-xl font-semibold bg-yellow-100 rounded-sm'>
