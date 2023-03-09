@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { gruvboxLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { getAllPublished, getSingleBlogPostBySlug } from '../../lib/notion';
+import Link from 'next/link';
 
 const CodeBlock = ({ language, codestring }) => {
   return (
