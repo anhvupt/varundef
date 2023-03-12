@@ -44,7 +44,7 @@ export default function About() {
           <section className='flex flex-col gap-2'>
             <h2 className='text-xl w-max font-semibold bg-yellow-100'>Why I name it Varundef?</h2>
             <p>
-              It's stand for a variable that's undefined. I am gonna use this name for other things
+              It is stand for "variable that is undefined". I am going to use this name for other things
               from now on
             </p>
           </section>
