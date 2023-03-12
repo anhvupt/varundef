@@ -5,11 +5,31 @@ import {
   FaLinkedin,
   FaTwitter,
   FaFacebook,
-  FaInstagram
+  FaInstagram,
+  FaExternalLinkAlt
 } from 'react-icons/fa';
 import Header from '../components/header';
 
 export default function About() {
+  const projects = [
+    {
+      name: 'Varundef',
+      description: `
+      Created using Next.js and deployed on Vercel, 
+      Varundef serves as a platform where I can share my knowledge and summarize my learnings. 
+      The website is inspired by the notion-next.js-demo of Bejamas.io.
+      `,
+      githubUrl: 'https://github.com/anhvupt/varundef',
+      liveUrl: 'https://varundef.com'
+    },
+    {
+      name: 'Varundef facebook page',
+      description: `
+      It is a facebook page that I created to share my thoughts and memes.
+      `,
+      liveUrl: 'https://www.facebook.com/varundef2023'
+    }
+  ];
   return (
     <>
       <Head>
@@ -18,74 +38,117 @@ export default function About() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='w-2/3 m-auto flex flex-col lg:mt-8'>
+      <main className='w-2/3 m-auto flex flex-col my-3 lg:my-8'>
         <Header />
-        <div className=''>
-          <p className='mt-4'>
-            I am Vu Pham, a skilled web developer based in Vietnam, specializing in .NET Core,
-            Angular, and TypeScript. With a passion for clean code and cutting-edge technologies, I
-            build scalable web applications and continuously expand my knowledge of cloud
-            technologies like Azure and AWS.
-          </p>
-          <p className='text-xl w-max font-semibold mb-4 mt-8 bg-yellow-100'>Find me at</p>
-          <div className='flex flex-wrap'>
-            <div className='flex items-center mb-4 lg:w-1/2'>
-              <FaEnvelope className='mr-2' />
-              <a href='mailto:anhvupt2412@gmail.com' className='underline'>
-                anhvupt2412@gmail.com
-              </a>
+        <div className='flex flex-col gap-8'>
+          <section className='flex flex-col gap-2'>
+            <h2 className='text-xl w-max font-semibold bg-yellow-100'>Why I name it Varundef?</h2>
+            <p>
+              It's stand for a variable that's undefined. I am gonna use this name for other things
+              from now on
+            </p>
+          </section>
+          <section className='flex flex-col gap-2'>
+            <h2 className='text-xl w-max font-semibold bg-yellow-100'>About me</h2>
+            <p>
+              I am Vu Pham, a skilled web developer based in Vietnam, specializing in .NET Core,
+              Angular, and TypeScript. With a passion for clean code and cutting-edge technologies,
+              I build scalable web applications and continuously expand my knowledge of cloud
+              technologies like Azure.
+            </p>
+            <h2 className='text-lg w-max font-semibold'>Find me at</h2>
+            <div className='flex lg:flex-wrap lg:gap-y-4'>
+              <div className='flex items-center lg:w-1/2'>
+                <FaEnvelope className='mr-2' />
+                <a href='mailto:anhvupt2412@gmail.com' className='underline'>
+                  anhvupt2412@gmail.com
+                </a>
+              </div>
+              <div className='flex items-center lg:w-1/2'>
+                <FaLinkedin className='mr-2' />
+                <a
+                  href='https://www.linkedin.com/in/anhvupt'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline'>
+                  linkedin.com/in/anhvupt
+                </a>
+              </div>
+              <div className='flex items-center lg:w-1/2'>
+                <FaGithub className='mr-2' />
+                <a
+                  href='https://github.com/anhvupt'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline'>
+                  anhvupt
+                </a>
+              </div>
+              <div className='flex items-center lg:w-1/2'>
+                <FaTwitter className='mr-2' />
+                <a
+                  href='https://twitter.com/anhvupt'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline'>
+                  @anhvupt
+                </a>
+              </div>
+              <div className='flex items-center lg:w-1/2'>
+                <FaFacebook className='mr-2' />
+                <a
+                  href='https://www.facebook.com/anhvupt98'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline'>
+                  fb.me/anhvupt98
+                </a>
+              </div>
+              <div className='flex items-center lg:w-1/2'>
+                <FaInstagram className='mr-2' />
+                <a
+                  href='https://www.instagram.com/_anhvupt'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline'>
+                  @_anhvupt
+                </a>
+              </div>
             </div>
-            <div className='flex items-center mb-4 lg:w-1/2'>
-              <FaLinkedin className='mr-2' />
-              <a
-                href='https://www.linkedin.com/in/anhvupt'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline'>
-                linkedin.com/in/anhvupt
-              </a>
+          </section>
+          <section className=''>
+            <h2 className='text-xl w-max font-semibold bg-yellow-100'>Projects</h2>
+            <div className='flex flex-col gap-2'>
+              {projects.map((project) => (
+                <div className='mt-2' key={project.name}>
+                  <h3 className='text-lg font-semibold'>{project.name}</h3>
+                  <p>{project.description}</p>
+                  <div className='flex mt-2'>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center mr-4'>
+                        <FaGithub className='mr-1' />
+                        <span>GitHub</span>
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex items-center'>
+                        <FaExternalLinkAlt className='mr-1' />
+                        <span>Live Site</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className='flex items-center mb-4 lg:w-1/2'>
-              <FaGithub className='mr-2' />
-              <a
-                href='https://github.com/anhvupt'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline'>
-                anhvupt
-              </a>
-            </div>
-            <div className='flex items-center mb-4 lg:w-1/2'>
-              <FaTwitter className='mr-2' />
-              <a
-                href='https://twitter.com/anhvupt'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline'>
-                @anhvupt
-              </a>
-            </div>
-            <div className='flex items-center mb-4 lg:w-1/2'>
-              <FaFacebook className='mr-2' />
-              <a
-                href='https://www.facebook.com/anhvupt98'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline'>
-                fb.me/anhvupt98
-              </a>
-            </div>
-            <div className='flex items-center mb-4 lg:w-1/2'>
-              <FaInstagram className='mr-2' />
-              <a
-                href='https://www.instagram.com/_anhvupt'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='underline'>
-                @_anhvupt
-              </a>
-            </div>
-          </div>
+          </section>
         </div>
       </main>
     </>
